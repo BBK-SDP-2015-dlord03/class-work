@@ -1,3 +1,5 @@
+package week1;
+
 class Storage<T> {
     T x;
     public void setValue(T value) {
@@ -5,5 +7,5 @@ class Storage<T> {
     }
     public T getValue() {
         return x;
-    }i
+    }
 }
