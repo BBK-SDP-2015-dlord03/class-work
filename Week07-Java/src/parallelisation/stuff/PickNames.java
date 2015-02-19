@@ -21,6 +21,18 @@ public class PickNames {
 			.filter(startsWithB)
 			.forEach(System.out::println);
 		
+		friends.stream()
+			.mapToInt(name -> name.length())
+			.forEach(System.out::println);
+	
+		friends.stream()
+			.mapToInt(name -> name.length())
+			.sum();
+		/*
+		String s = friends
+				.stream()
+				.reduce("Fred", (name1, name2) -> name1.length() >= name2.length());
+		*/
 	}
 
 }
