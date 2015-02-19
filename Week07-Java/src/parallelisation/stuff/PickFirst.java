@@ -16,7 +16,7 @@ public class PickFirst {
 				.filter(name -> name.startsWith("F"))
 				.findFirst();
 		
-		foundName.ifPresent(System.out::println);
+		System.out.println("A name starting with 'F' " + foundName.orElse("was not found"));
 		
 	}
 }
