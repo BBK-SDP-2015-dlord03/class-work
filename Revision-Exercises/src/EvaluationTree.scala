@@ -11,8 +11,8 @@ object EvaluationTree {
   
   def printSeq(seq: Seq[EvaluationTree]): String = seq match {
     case Nil => ""
-    case head :: tail => print(head) + ", " + printSeq(tail)
     case s :: Nil => print(s)
+    case head :: tail => print(head) + ", " + printSeq(tail)
   }
 
 }
