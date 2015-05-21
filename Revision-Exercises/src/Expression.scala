@@ -1,3 +1,7 @@
+/*
+ * Abstract Syntax Tree
+ * Simple example (according to Keith).
+ */
 object Expression extends App {
 
   println(Exp.evaluate(Plus(Mul(Num(3), Num(4)), Sub(Num(3), Num(4)))))
