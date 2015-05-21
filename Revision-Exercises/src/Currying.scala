@@ -5,14 +5,16 @@ object Currying extends App {
   
   println (normalAdd(3, 4))
   
-  // Add that you can curry
+  // Add that you can curry (with two argument lists)
   def add(x: Int) (y: Int): Int = x + y
   
+  // Calling the two argument list version
   println (add(3)(4))
   
-  // Change it to always add 3 (curry it)
+  // Curry it by setting the first parameter list to 3 and leaving the second one hanging
   val add3 = add(3) _
   
+  // Call the new curried function.
   println (add3(4))
   
 
