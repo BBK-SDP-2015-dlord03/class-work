@@ -7,9 +7,9 @@
 
 object InsertSort extends App {
 
-  def isort(xs: List[Int]): List[Int] = xs match {
+  def insertSort(xs: List[Int]): List[Int] = xs match {
     case List() => List()
-    case hd :: tl => insert(hd, isort(tl))
+    case hd :: tl => insert(hd, insertSort(tl))
   }
 
   def insert(x: Int, lst: List[Int]): List[Int] = lst match {
@@ -17,5 +17,5 @@ object InsertSort extends App {
     case hd :: tl => if (x <= hd) x :: lst else hd :: insert(x, tl)
   }
 
-  println(isort(List(7, 2, 17, 8, 6)))
+  println(insertSort(List(7, 2, 17, 8, 6)))
 }

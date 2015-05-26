@@ -17,5 +17,16 @@ object Currying extends App {
   // Call the new curried function.
   println (add3(4))
   
+  def line(a: Int, b: Int, x: Int): Int = a * x + b  
 
+  def curriedLine(a: Int)(b: Int)(x: Int): Int = line(a, b, x)
+
+  def defaultLine(x: Int): Int = curriedLine(1)(0)(x)
+  
+  println (defaultLine(5))
+  
+  def partialLine = (b: Int, x: Int) => line(2, b, x)
+  
+  println (partialLine(0, 1))
+  
 }

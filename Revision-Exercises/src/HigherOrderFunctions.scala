@@ -1,5 +1,10 @@
 import scala.annotation.tailrec
 
+
+/*
+ * Higher Order Functions are functions that take other functions as parameters, or whose result is a function.
+ */
+
 object HigherOrderFunctions extends App {
 
   def scaleList(xs: List[Double], factor: Double): List[Double] = xs match {
@@ -15,7 +20,6 @@ object HigherOrderFunctions extends App {
     }
     helper(List(), xs).reverse
   }
-
 
   def squareList(xs: List[Double]): List[Double] =
     xs map (x => x * x)
